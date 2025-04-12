@@ -81,10 +81,10 @@ const PostCard = ({ post, onPostUpdated }) => {
       {post.media && (
         <div className={styles.postMedia}>
           {post.media.match(/\.(jpg|jpeg|png|gif)$/i) ? (
-            <img src={`http://localhost:3000/uploads/${post.media}`} alt="Post media" />
+            <img src={`${process.env.REACT_APP_MEDIA_URL}/uploads/${post.media}`} alt="Post media" />
           ) : post.media.match(/\.(mp4|webm|ogg)$/i) ? (
             <video controls width="100%">
-              <source src={`http://localhost:3000/uploads/${post.media}`} />
+              <source src={`${process.env.REACT_APP_MEDIA_URL}/uploads/${post.media}`} />
             </video>
           ) : null}
         </div>

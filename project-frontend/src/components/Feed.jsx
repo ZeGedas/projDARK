@@ -49,9 +49,9 @@ const Feed = () => {
           {post.media && (
             <div className={styles.postMedia}>
               {post.media.match(/\.(jpg|jpeg|png|gif)$/i) ? (
-                <img src={`http://localhost:3000/uploads/${post.media}`} alt="Post media" />
+                <img src={`${process.env.REACT_APP_MEDIA_URL}/uploads/${post.media}`} alt="Post media" />
               ) : post.media.match(/\.(mp4|webm|ogg)$/i) ? (
-                <video controls src={`http://localhost:3000/uploads/${post.media}`} />
+                <video controls src={`${process.env.REACT_APP_MEDIA_URL}/uploads/${post.media}`} />
               ) : null}
             </div>
           )}
