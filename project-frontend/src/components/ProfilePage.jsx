@@ -207,7 +207,7 @@ const ProfilePage = () => {
         className={styles.profileHeaderCard}
         style={{
           backgroundImage: profile.cover
-            ? `url(${process.env.REACT_APP_API_URL}/uploads/covers/${profile.cover})`
+            ? `url(${process.env.REACT_APP_MEDIA_URL}/uploads/covers/${profile.cover})`
             : 'none'
         }}
       >
@@ -216,7 +216,7 @@ const ProfilePage = () => {
             <img
               src={
                 profile.avatar
-                  ? `${process.env.REACT_APP_API_URL}/uploads/avatars/${profile.avatar}`
+                  ? `${process.env.REACT_APP_MEDIA_URL}/uploads/avatars/${profile.avatar}`
                   : '/default-avatar.png'
               }
               alt=""
